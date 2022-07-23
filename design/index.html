@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- Title Heading -->
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link href="styling/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<!-- Login Form -->
+		<div class="login">
+			<h1>Login</h1>
+			<!-- Form action call to authenticate.php with method post-->
+			<form action="authenticate.php" method="post">
+				<!-- This login form uses labels -->
+				<!-- User Icon w/ a label-->
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<!-- Input Field: Username -->
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<!-- Lock Icon w/ a label-->
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<!-- Input Field: Password -->
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<!-- Login Submit Button -->
+				<input type="submit" value="Login">
+		</div>
+	</body>
+</html>
