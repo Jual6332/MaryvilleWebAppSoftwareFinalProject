@@ -26,6 +26,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();
 
+	// For number of rows higher than zero, bind id and password
 	if ($stmt->num_rows > 0) {
 		$stmt->bind_result($id, $password);
 		$stmt->fetch();
