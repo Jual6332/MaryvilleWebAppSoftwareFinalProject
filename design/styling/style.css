@@ -1,3 +1,12 @@
+/* Star Styling */
+* {
+	box-sizing:  border-box;
+	font-family:  -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans","helvetica neue", Arial, sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing:  antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 /* Body Tag Styling */
 body {
 	background-color:  #435165;
@@ -6,7 +15,7 @@ body {
 /* Login Element Styling*/
 .login {
 	width:  400px;
-	background-color:  #fffff;
+	background-color:  #ffffff;
 	box-shadow:  0 0 9px 0 rgba(0,0,0,0.3);
 	margin:  100px auto;
 }
