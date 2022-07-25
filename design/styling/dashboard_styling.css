@@ -10,3 +10,31 @@
 	box-sizing: border-box;
 	font-family: "Poppins",sans-serif;
 }
+
+body {
+	background: rgb(226,226,226);
+}
+
+nav {
+	position:  sticky;
+	top: 0;
+	bottom:  0;
+	height:  100vh;
+	left:  0;
+	width:  90px;
+	background: #fff;
+	overflow:  hidden;
+	transition:  1s;
+}
+
+nav:hover {
+	width:  280px;
+	transition: 1s;
+}
+
+.logo {
+	text-align: center;
+	display:  flex;
+	margin: 10px 0 0 10px;
+	padding-bottom: 3rem;
+}
