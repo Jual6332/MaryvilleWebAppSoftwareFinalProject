@@ -29,7 +29,7 @@
 		$stmt->store_result();
 
 		if ($stmt->num_rows > 0) {
-			$stmt->bind_result($id, $password);
+			$stmt->bind_result($username, $password);
 			$stmt->fetch();
 			// Account exists, now we need to verify the password.
 			// Note: Remember to use password_hash in your registration file to store the hashed passwords.
