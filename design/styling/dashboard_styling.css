@@ -21,7 +21,7 @@ nav {
 	bottom:  0;
 	height:  100vh;
 	left:  0;
-	width:  90px;
+	width:  180px;
 	background: #fff;
 	overflow:  hidden;
 	transition:  1s;
@@ -37,4 +37,51 @@ nav:hover {
 	display:  flex;
 	margin: 10px 0 0 10px;
 	padding-bottom: 3rem;
+}
+
+.logo img{
+	width:  45px;
+	height:  45px;
+	border-radius:  50%;
+}
+
+.logo span{
+	font-weight:  bold;
+	padding-left: 15px;
+	font-size:  14px;
+	color:  rgb(85,83,83);
+	display:  table;
+	padding:  10px;
+}
+
+.nav .fas{
+	position:  relative;
+	width:  70px;
+	height:  40px;
+	top: 20px;
+	font-siz:  20px;
+	text-align:  center;
+}
+
+.nav-item{
+	position:  relative;
+	top: 12px;
+	margin-left: 10px;
+}
+
+a:hover{
+	background:  #eee;
+}
+
+a:hover i{
+	color: #34AF6D;
+}
+
+.logout{
+	position:  absolute;
+	bottom:  0;
+}
+
+.container{
+	display: flex;
 }
