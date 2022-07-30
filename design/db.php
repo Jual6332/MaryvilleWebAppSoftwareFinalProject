@@ -20,7 +20,7 @@
 	}
 
 	// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-	if ($stmt = $con->prepare('SELECT username, password FROM teacherlogin WHERE username = ?')){
+	if ($stmt = $conn->prepare('SELECT username, password FROM teacherlogin WHERE username = ?')){
 		// Bind parameters (s = string, i = int, b = blob, etc).
 		// In this case, the username is a string
 		$stmt->bind_param('s',$_POST['username']);
