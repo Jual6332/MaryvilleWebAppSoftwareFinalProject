@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$servername = 'localhost';
 	$username = 'root';
 	$pass = '';
@@ -20,7 +21,7 @@
 	}
 
 	// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-	if ($stmt = $conn->prepare('SELECT username, password FROM accounts WHERE username = ?')){
+	if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?')){
 		// Bind parameters (s = string, i = int, b = blob, etc).
 		// In this case, the username is a string
 		$stmt->bind_param('s',$_POST['username']);
