@@ -27,6 +27,31 @@
 		$stmt->execute();
 		// Store the result. We will check if account exists in the database.
 		$stmt->store_result();
+
+		if ($stmt->num_rows > 0) {
+			$stmt->bind_result($id, $password);
+			$stmt->fetch();
+			// Account exists, now we need to verify the password.
+			// Note: Remember to use password_hash in your registration file to store the hashed passwords.
+			if (password_verify($_POST['password'], $password)) {
+				// Verification success! The user has logged-in!
+				// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+				session_regenerate_id();
+				$_SESSION['loggedin'] = TRUE;
+				$_SESSION['name'] = $_POST['username'];
+				$_SESSION['id'] = $id;
+				echo 'Welcome ' . $_SESSION['name'] . '!';
+			} else {
+				// Incorrect password
+				echo 'Incorrect username and/or password!';
+			}
+		} else {
+			// Incorrect username
+			echo 'Incorrect username and/or password!';
+		}
+
+		// Close SQL connection.
+		$stmt->close();
 	}
 ?>
 
